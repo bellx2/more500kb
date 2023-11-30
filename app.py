@@ -4,7 +4,7 @@ import tempfile
 import urllib.parse
 import os
 
-st.title("More 500KB")
+st.title("Over 500KB")
 
 st.write("元画像の圧縮比率とサイズを変えて500KB以上の画像ファイルを生成します。画質は向上しません。")
 st.write("アップロードデータは画像処理のために使用し、保存していません。")
