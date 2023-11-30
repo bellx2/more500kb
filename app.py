@@ -17,7 +17,7 @@ if image_file is not None:
         for i in range(10):
             img = img.resize(
                 (int(img.size[0]*(1+i*0.2)), int(img.size[1]*(1+i*0.2))))
-            img.save(tmp.name, quality=95)
+            img.save(tmp.name, quality=100)
             file_size = os.path.getsize(tmp.name)/1024
             if file_size > 500:
                 break
