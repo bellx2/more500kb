@@ -6,10 +6,10 @@ import os
 
 st.title("More 500KB")
 
-st.write("謎制限で500KB以上の画像ファイルが必要なときに使うツールです。圧縮率を下げて画像を少しずつ拡大することで、500KB以上のJEPG画像を生成します。プレビューは拡張されたサイズのPNG画像を表示します。")
-st.write("一時領域で処理するため管理者も画像を見ることはできません。")
+st.write("元画像の圧縮比率とサイズを変えて500KB以上の画像ファイルを生成します。画質は向上しません。")
+st.write("アップロードデータは画像処理のために使用し、保存していません。")
 
-image_file = st.file_uploader("画像をアップロード", type=['png', 'jpeg', 'jpg'])
+image_file = st.file_uploader("画像をアップロードしてください", type=['png', 'jpeg', 'jpg'])
 if image_file is not None:
     file_details = {"FileName": image_file.name, "FileType": image_file.type}
     img = Image.open(image_file).convert('RGB')
