@@ -14,10 +14,10 @@ if image_file is not None:
     file_details = {"FileName": image_file.name, "FileType": image_file.type}
     img = Image.open(image_file).convert('RGB')
     with tempfile.NamedTemporaryFile(delete=True, suffix=".jpg") as tmp:
-        for i in range(5):
+        for i in range(10):
             img = img.resize(
                 (int(img.size[0]*(1+i*0.2)), int(img.size[1]*(1+i*0.2))))
-            img.save(tmp.name, quality=100)
+            img.save(tmp.name, quality=95)
             file_size = os.path.getsize(tmp.name)/1024
             if file_size > 500:
                 break
